@@ -9,8 +9,14 @@
   <body ng-app='myApp'>
     <div ng-controller='LaunchpadController'>
     <h1>What's Your Favorite Movie?</h1>
-    <input type="text" name="" value="" placeholder='Add favorite movie'>
-    <p>My favorite movie is:</p>
+    <input type="text" name="name" value="" placeholder='Add favorite movie' ng-model='movieName'>
+    <button ng-click='getMovieName()'>Get Movie Name</button>
+    <p>My favorite movie is: {{movieName}}</p>
+    <ul>
+  <li ng-repeat='movie in favoriteMovies'>
+    {{ movie }}
+  </li>
+</ul>
   </div>
   </body>
 </html>
